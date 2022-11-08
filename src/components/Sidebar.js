@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BiBarcodeReader } from "react-icons/bi";
 import { BsCashCoin, BsPersonLinesFill } from "react-icons/bs";
 import { CgArrowsExchange } from "react-icons/cg";
@@ -9,10 +10,12 @@ const Sidebar = () => {
   return (
     <Wrapper>
       {icons.map((item) => {
-        const { id, icon, title } = item;
+        const { id, icon, title, link } = item;
         return (
           <div className="icon-container" key={id}>
-            <div className="icon">{icon}</div>
+            <Link to={link} className="icon">
+              {icon}
+            </Link>
             <p>{title}</p>
             <hr />
           </div>
@@ -57,25 +60,30 @@ const icons = [
     id: 1,
     title: "payables",
     icon: <BiBarcodeReader />,
+    link: "/payables",
   },
   {
     id: 2,
     title: "receivables",
     icon: <BsCashCoin />,
+    link: "/receivables",
   },
   {
     id: 3,
     title: "cash-flow",
     icon: <CgArrowsExchange />,
+    link: "/cashflow",
   },
   {
     id: 4,
     title: "suppliers",
     icon: <HiOutlineShoppingCart />,
+    link: "/suppliers",
   },
   {
     id: 5,
     title: "clients",
     icon: <BsPersonLinesFill />,
+    link: "/clients",
   },
 ];
