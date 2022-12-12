@@ -2,10 +2,10 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import { FaBars } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ handleClick }) => {
   return (
     <Wrapper>
-      <button className="bars" type="button">
+      <button onClick={handleClick} className="bars" type="button">
         <FaBars />
       </button>
       <div>

@@ -29,8 +29,10 @@ export default Sidebar;
 
 const Wrapper = styled.aside`
   background: var(--primary-500);
-  height: calc(100% - 6rem);
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
+  position: fixed;
+  top: 6rem;
+  left: 0;
   width: 7rem;
   display: flex;
   flex-direction: column;
@@ -44,7 +46,7 @@ const Wrapper = styled.aside`
   }
   .icon {
     color: var(--primary-100);
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
