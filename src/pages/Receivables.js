@@ -1,5 +1,12 @@
+import { InputAccount, ListAccounts } from "../components";
+
 const Receivables = () => {
-  return <div>Receivables</div>;
+  return (
+    <div>
+      <InputAccount />
+      <ListAccounts />
+    </div>
+  );
 };
 
 export default Receivables;
