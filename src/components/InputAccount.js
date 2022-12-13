@@ -1,19 +1,26 @@
 import styled from "styled-components";
 
-const InputAccount = () => {
+const InputAccount = ({ options, placeholder, placeholder2, btn_name }) => {
+  const optionToRender = options.map((option) => {
+    return <option key={option.label}>{option.value}</option>;
+  });
   return (
     <Wrapper>
       <form>
         <input type="date" />
         <input type="date" />
         <select>
-          <option>utilities</option>
-          <option>test</option>
-          <option>test2</option>
+          <option
+            key="choose-a-category"
+            label="Choose a category"
+            value="Choose a category"
+            hidden
+          ></option>
+          {optionToRender}
         </select>
-        <input type="text" placeholder="suplyer" />
-        <input type="number" placeholder="value" />
-        <button className="btn">submit</button>
+        <input type="text" placeholder={placeholder} />
+        <input type="number" placeholder={placeholder2} />
+        <button className="btn">{btn_name}</button>
       </form>
     </Wrapper>
   );
