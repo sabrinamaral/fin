@@ -1,9 +1,9 @@
-import { InputAccount, ListAccounts } from "../components";
+import { ListAccounts } from "../components";
 
 const Receivables = () => {
   return (
     <div>
-      <InputAccount />
+      {/* <InputAccount /> */}
       <ListAccounts />
     </div>
   );
